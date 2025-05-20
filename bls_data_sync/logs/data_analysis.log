@@ -1,0 +1,170 @@
+2025-05-21 01:10:01,148 - botocore.credentials - INFO - Found credentials in environment variables.
+2025-05-21 01:10:01,275 - __main__ - INFO - Starting data analysis
+2025-05-21 01:10:01,677 - __main__ - ERROR - Error reading BLS data: An error occurred while calling o27.csv.
+: java.lang.RuntimeException: java.lang.ClassNotFoundException: Class org.apache.hadoop.fs.s3a.S3AFileSystem not found
+	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:2688)
+	at org.apache.hadoop.fs.FileSystem.getFileSystemClass(FileSystem.java:3431)
+	at org.apache.hadoop.fs.FileSystem.createFileSystem(FileSystem.java:3466)
+	at org.apache.hadoop.fs.FileSystem.access$300(FileSystem.java:174)
+	at org.apache.hadoop.fs.FileSystem$Cache.getInternal(FileSystem.java:3574)
+	at org.apache.hadoop.fs.FileSystem$Cache.get(FileSystem.java:3521)
+	at org.apache.hadoop.fs.FileSystem.get(FileSystem.java:540)
+	at org.apache.hadoop.fs.Path.getFileSystem(Path.java:365)
+	at org.apache.spark.sql.execution.datasources.DataSource$.$anonfun$checkAndGlobPathIfNecessary$1(DataSource.scala:724)
+	at scala.collection.immutable.List.map(List.scala:293)
+	at org.apache.spark.sql.execution.datasources.DataSource$.checkAndGlobPathIfNecessary(DataSource.scala:722)
+	at org.apache.spark.sql.execution.datasources.DataSource.checkAndGlobPathIfNecessary(DataSource.scala:551)
+	at org.apache.spark.sql.execution.datasources.DataSource.resolveRelation(DataSource.scala:404)
+	at org.apache.spark.sql.DataFrameReader.loadV1Source(DataFrameReader.scala:229)
+	at org.apache.spark.sql.DataFrameReader.$anonfun$load$2(DataFrameReader.scala:211)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:211)
+	at org.apache.spark.sql.DataFrameReader.csv(DataFrameReader.scala:538)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.ClassNotFoundException: Class org.apache.hadoop.fs.s3a.S3AFileSystem not found
+	at org.apache.hadoop.conf.Configuration.getClassByName(Configuration.java:2592)
+	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:2686)
+	... 29 more
+
+2025-05-21 01:10:02,025 - __main__ - ERROR - Error reading population data: max() got an unexpected keyword argument 'key'
+2025-05-21 01:10:02,025 - __main__ - ERROR - Failed to read data. Aborting analysis.
+2025-05-21 01:10:02,027 - py4j.clientserver - INFO - Closing down clientserver connection
+2025-05-21 01:11:20,377 - botocore.credentials - INFO - Found credentials in environment variables.
+2025-05-21 01:11:20,493 - __main__ - INFO - Starting data analysis
+2025-05-21 01:11:21,456 - __main__ - INFO - Successfully downloaded bls_data/pr.data.0.Current to /var/folders/z3/jbgjbmwd1p3fwkxbqskw_s9h0000gn/T/tmpqlcz8ewf/bls_data.csv
+2025-05-21 01:11:23,776 - __main__ - ERROR - Error reading BLS data: [UNRESOLVED_COLUMN.WITH_SUGGESTION] A column or function parameter with name `value` cannot be resolved. Did you mean one of the following? [`series_id        	year	period	       value	footnote_codes`].;
+'Project [series_id        	year	period	       value	footnote_codes#17, cast('value as double) AS value#19]
++- Relation [series_id        	year	period	       value	footnote_codes#17] csv
+
+2025-05-21 01:11:23,822 - __main__ - ERROR - Error reading population data: max() got an unexpected keyword argument 'key'
+2025-05-21 01:11:23,822 - __main__ - ERROR - Failed to read data. Aborting analysis.
+2025-05-21 01:11:23,824 - py4j.clientserver - INFO - Closing down clientserver connection
+2025-05-21 01:14:09,209 - botocore.credentials - INFO - Found credentials in environment variables.
+2025-05-21 01:14:09,318 - __main__ - INFO - Starting data analysis
+2025-05-21 01:14:10,041 - __main__ - INFO - Successfully downloaded bls_data/pr.data.0.Current to /var/folders/z3/jbgjbmwd1p3fwkxbqskw_s9h0000gn/T/tmp8ajjh3iy/bls_data.csv
+2025-05-21 01:14:12,244 - __main__ - ERROR - Error reading BLS data: [UNRESOLVED_COLUMN.WITH_SUGGESTION] A column or function parameter with name `value` cannot be resolved. Did you mean one of the following? [`series_id        	year	period	       value	footnote_codes`].;
+'Project [series_id        	year	period	       value	footnote_codes#19, cast('value as double) AS value#22]
++- Project [series_id        	year	period	       value	footnote_codes#17 AS series_id        	year	period	       value	footnote_codes#19]
+   +- Relation [series_id        	year	period	       value	footnote_codes#17] csv
+
+2025-05-21 01:14:12,367 - __main__ - INFO - Successfully downloaded population_data/population_data_20250520_174611.json to /var/folders/z3/jbgjbmwd1p3fwkxbqskw_s9h0000gn/T/tmp8ajjh3iy/population_data.json
+2025-05-21 01:14:12,485 - __main__ - INFO - Successfully read population data
+2025-05-21 01:14:12,485 - __main__ - ERROR - Failed to read data. Aborting analysis.
+2025-05-21 01:14:12,486 - py4j.clientserver - INFO - Closing down clientserver connection
+2025-05-21 01:18:27,672 - botocore.credentials - INFO - Found credentials in environment variables.
+2025-05-21 01:18:27,771 - __main__ - INFO - Starting data analysis
+2025-05-21 01:18:28,529 - __main__ - INFO - Successfully downloaded bls_data/pr.data.0.Current to /var/folders/z3/jbgjbmwd1p3fwkxbqskw_s9h0000gn/T/tmppu8jpw9x/bls_data.csv
+2025-05-21 01:18:30,949 - __main__ - INFO - Original column names: ['series_id        \tyear\tperiod\t       value\tfootnote_codes']
+2025-05-21 01:18:30,954 - __main__ - INFO - Cleaned column names: ['series_id        \tyear\tperiod\t       value\tfootnote_codes']
+2025-05-21 01:18:31,186 - __main__ - ERROR - Error reading BLS data: [UNRESOLVED_COLUMN.WITH_SUGGESTION] A column or function parameter with name `value` cannot be resolved. Did you mean one of the following? [`series_id        	year	period	       value	footnote_codes`].;
+'Project [series_id        	year	period	       value	footnote_codes#19, cast('value as double) AS value#22]
++- Project [series_id        	year	period	       value	footnote_codes#17 AS series_id        	year	period	       value	footnote_codes#19]
+   +- Relation [series_id        	year	period	       value	footnote_codes#17] csv
+
+2025-05-21 01:18:31,372 - __main__ - INFO - Successfully downloaded population_data/population_data_20250520_174611.json to /var/folders/z3/jbgjbmwd1p3fwkxbqskw_s9h0000gn/T/tmppu8jpw9x/population_data.json
+2025-05-21 01:18:31,518 - __main__ - INFO - Original column names: ['country', 'value', 'year']
+2025-05-21 01:18:31,526 - __main__ - INFO - Cleaned column names: ['country', 'value', 'year']
+2025-05-21 01:18:31,526 - __main__ - INFO - Successfully read population data
+2025-05-21 01:18:31,526 - __main__ - ERROR - Failed to read data. Aborting analysis.
+2025-05-21 01:18:31,528 - py4j.clientserver - INFO - Closing down clientserver connection
+2025-05-21 01:19:02,336 - botocore.credentials - INFO - Found credentials in environment variables.
+2025-05-21 01:19:02,442 - __main__ - INFO - Starting data analysis
+2025-05-21 01:19:03,099 - __main__ - INFO - Successfully downloaded bls_data/pr.data.0.Current to /var/folders/z3/jbgjbmwd1p3fwkxbqskw_s9h0000gn/T/tmp9m2ze74o/bls_data.csv
+2025-05-21 01:19:05,357 - __main__ - INFO - Original column names: ['series_id        ', 'year', 'period', '       value', 'footnote_codes']
+2025-05-21 01:19:05,373 - __main__ - INFO - Cleaned column names: ['series_id', 'year', 'period', 'value', 'footnote_codes']
+2025-05-21 01:19:05,401 - __main__ - INFO - Successfully read BLS data
+2025-05-21 01:19:05,562 - __main__ - INFO - Successfully downloaded population_data/population_data_20250520_174611.json to /var/folders/z3/jbgjbmwd1p3fwkxbqskw_s9h0000gn/T/tmp9m2ze74o/population_data.json
+2025-05-21 01:19:05,694 - __main__ - INFO - Original column names: ['country', 'value', 'year']
+2025-05-21 01:19:05,699 - __main__ - INFO - Cleaned column names: ['country', 'value', 'year']
+2025-05-21 01:19:05,699 - __main__ - INFO - Successfully read population data
+2025-05-21 01:19:05,733 - __main__ - INFO - Population statistics calculated successfully
+2025-05-21 01:19:05,759 - __main__ - INFO - Best years analysis completed successfully
+2025-05-21 01:19:05,838 - __main__ - ERROR - Error generating combined report: [AMBIGUOUS_REFERENCE] Reference `year` is ambiguous, could be: [`year`, `year`].
+2025-05-21 01:19:05,838 - __main__ - INFO - 
+Population Statistics (2013-2018):
+2025-05-21 01:19:06,205 - __main__ - INFO - 
+Best Years for Each Series:
+2025-05-21 01:19:06,782 - __main__ - INFO - 
+Combined Report (PRS30006032, Q01):
+2025-05-21 01:19:06,784 - py4j.clientserver - INFO - Closing down clientserver connection
+2025-05-21 01:21:42,753 - botocore.credentials - INFO - Found credentials in environment variables.
+2025-05-21 01:21:42,863 - __main__ - INFO - Starting data analysis
+2025-05-21 01:21:43,547 - __main__ - INFO - Successfully downloaded bls_data/pr.data.0.Current to /var/folders/z3/jbgjbmwd1p3fwkxbqskw_s9h0000gn/T/tmpxb9zcywr/bls_data.csv
+2025-05-21 01:21:45,862 - __main__ - INFO - Original column names: ['series_id        ', 'year', 'period', '       value', 'footnote_codes']
+2025-05-21 01:21:45,881 - __main__ - INFO - Cleaned column names: ['series_id', 'year', 'period', 'value', 'footnote_codes']
+2025-05-21 01:21:45,908 - __main__ - INFO - Successfully read BLS data
+2025-05-21 01:21:46,051 - __main__ - INFO - Successfully downloaded population_data/population_data_20250520_174611.json to /var/folders/z3/jbgjbmwd1p3fwkxbqskw_s9h0000gn/T/tmpxb9zcywr/population_data.json
+2025-05-21 01:21:46,155 - __main__ - INFO - Original column names: ['country', 'value', 'year']
+2025-05-21 01:21:46,162 - __main__ - INFO - Cleaned column names: ['country', 'value', 'year']
+2025-05-21 01:21:46,162 - __main__ - INFO - Successfully read population data
+2025-05-21 01:21:46,186 - __main__ - INFO - Population statistics calculated successfully
+2025-05-21 01:21:46,214 - __main__ - INFO - Best years analysis completed successfully
+2025-05-21 01:21:46,329 - __main__ - INFO - Combined report generated successfully
+2025-05-21 01:21:46,329 - __main__ - INFO - 
+Population Statistics (2013-2018):
+2025-05-21 01:21:46,697 - __main__ - INFO - 
+Best Years for Each Series:
+2025-05-21 01:21:47,298 - __main__ - INFO - 
+Combined Report (PRS30006032, Q01):
+2025-05-21 01:21:47,489 - py4j.clientserver - INFO - Closing down clientserver connection
+2025-05-21 01:34:20,934 - botocore.credentials - INFO - Found credentials in environment variables.
+2025-05-21 01:34:21,033 - __main__ - INFO - Starting data analysis
+2025-05-21 01:34:21,689 - __main__ - INFO - Successfully downloaded bls_data/pr.data.0.Current to /var/folders/z3/jbgjbmwd1p3fwkxbqskw_s9h0000gn/T/tmp_s9ye4zc/bls_data.csv
+2025-05-21 01:34:23,972 - __main__ - INFO - Original column names: ['series_id        ', 'year', 'period', '       value', 'footnote_codes']
+2025-05-21 01:34:23,988 - __main__ - INFO - Cleaned column names: ['series_id', 'year', 'period', 'value', 'footnote_codes']
+2025-05-21 01:34:24,040 - __main__ - INFO - Sample BLS data:
+2025-05-21 01:34:24,184 - __main__ - INFO - Successfully read BLS data
+2025-05-21 01:34:24,340 - __main__ - INFO - Successfully downloaded population_data/population_data_20250520_174611.json to /var/folders/z3/jbgjbmwd1p3fwkxbqskw_s9h0000gn/T/tmp_s9ye4zc/population_data.json
+2025-05-21 01:34:24,474 - __main__ - INFO - Original column names: ['country', 'value', 'year']
+2025-05-21 01:34:24,479 - __main__ - INFO - Cleaned column names: ['country', 'value', 'year']
+2025-05-21 01:34:24,490 - __main__ - INFO - Sample Population data:
+2025-05-21 01:34:24,565 - __main__ - INFO - Successfully read population data
+2025-05-21 01:34:24,588 - __main__ - INFO - Population statistics calculated successfully
+2025-05-21 01:34:24,609 - __main__ - INFO - Best years analysis completed successfully
+2025-05-21 01:34:24,609 - __main__ - INFO - Checking for PRS30006032 in BLS data:
+2025-05-21 01:34:24,711 - __main__ - INFO - Filtered BLS data:
+2025-05-21 01:34:24,773 - __main__ - INFO - Population data:
+2025-05-21 01:34:24,828 - __main__ - INFO - Combined report generated successfully
+2025-05-21 01:34:24,828 - __main__ - INFO - 
+Population Statistics (2013-2018):
+2025-05-21 01:34:25,054 - __main__ - INFO - 
+Best Years for Each Series:
+2025-05-21 01:34:25,609 - __main__ - INFO - 
+Combined Report (PRS30006032, Q01):
+2025-05-21 01:34:25,748 - py4j.clientserver - INFO - Closing down clientserver connection
+2025-05-21 01:57:15,911 - botocore.credentials - INFO - Found credentials in environment variables.
+2025-05-21 01:57:16,007 - __main__ - INFO - Starting data analysis
+2025-05-21 01:57:16,781 - __main__ - INFO - Successfully downloaded bls_data/pr.data.0.Current to /var/folders/z3/jbgjbmwd1p3fwkxbqskw_s9h0000gn/T/tmpdnh_2jqo/bls_data.csv
+2025-05-21 01:57:18,972 - __main__ - INFO - Original column names: ['series_id        ', 'year', 'period', '       value', 'footnote_codes']
+2025-05-21 01:57:18,990 - __main__ - INFO - Cleaned column names: ['series_id', 'year', 'period', 'value', 'footnote_codes']
+2025-05-21 01:57:19,023 - __main__ - INFO - Sample BLS data:
+2025-05-21 01:57:19,148 - __main__ - INFO - Successfully read BLS data
+2025-05-21 01:57:19,264 - __main__ - INFO - Successfully downloaded population_data/population_data_20250520_174611.json to /var/folders/z3/jbgjbmwd1p3fwkxbqskw_s9h0000gn/T/tmpdnh_2jqo/population_data.json
+2025-05-21 01:57:19,381 - __main__ - INFO - Original column names: ['country', 'value', 'year']
+2025-05-21 01:57:19,388 - __main__ - INFO - Cleaned column names: ['country', 'value', 'year']
+2025-05-21 01:57:19,396 - __main__ - INFO - Sample Population data:
+2025-05-21 01:57:19,460 - __main__ - INFO - Successfully read population data
+2025-05-21 01:57:19,484 - __main__ - INFO - Population statistics calculated successfully
+2025-05-21 01:57:19,508 - __main__ - INFO - Best years analysis completed successfully
+2025-05-21 01:57:19,508 - __main__ - INFO - Checking for PRS30006032 in BLS data:
+2025-05-21 01:57:19,581 - __main__ - INFO - Filtered BLS data:
+2025-05-21 01:57:19,662 - __main__ - INFO - Population data:
+2025-05-21 01:57:19,713 - __main__ - INFO - Combined report generated successfully
+2025-05-21 01:57:19,713 - __main__ - INFO - 
+Population Statistics (2013-2018):
+2025-05-21 01:57:19,930 - __main__ - INFO - 
+Best Years for Each Series:
+2025-05-21 01:57:20,561 - __main__ - INFO - 
+Combined Report (PRS30006032, Q01):
+2025-05-21 01:57:20,702 - py4j.clientserver - INFO - Closing down clientserver connection
