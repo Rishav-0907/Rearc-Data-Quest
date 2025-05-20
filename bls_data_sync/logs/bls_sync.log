@@ -1,0 +1,86 @@
+2025-05-20 16:33:06,909 - botocore.credentials - INFO - Found credentials in environment variables.
+2025-05-20 16:33:07,399 - __main__ - INFO - Starting BLS data sync
+2025-05-20 16:33:08,444 - __main__ - ERROR - Error connecting to AWS: An error occurred (InvalidAccessKeyId) when calling the ListBuckets operation: The AWS Access Key Id you provided does not exist in our records.
+2025-05-20 16:33:08,444 - __main__ - ERROR - AWS connection test failed. Aborting sync.
+2025-05-20 16:54:26,134 - botocore.credentials - INFO - Found credentials in environment variables.
+2025-05-20 16:54:26,230 - __main__ - INFO - Starting BLS data sync
+2025-05-20 16:54:27,200 - __main__ - ERROR - Error connecting to AWS: An error occurred (InvalidAccessKeyId) when calling the ListBuckets operation: The AWS Access Key Id you provided does not exist in our records.
+2025-05-20 16:54:27,200 - __main__ - ERROR - AWS connection test failed. Aborting sync.
+2025-05-20 16:55:55,786 - botocore.credentials - INFO - Found credentials in environment variables.
+2025-05-20 16:55:55,871 - __main__ - INFO - Starting BLS data sync
+2025-05-20 16:55:56,814 - __main__ - INFO - Successfully connected to AWS S3
+2025-05-20 16:55:56,815 - __main__ - INFO - Available buckets: ['my-rearc-project']
+2025-05-20 16:55:58,432 - __main__ - INFO - Successfully accessed bucket: my-rearc-project
+2025-05-20 16:56:00,268 - __main__ - INFO - BLS data sync completed
+2025-05-20 16:56:27,428 - botocore.credentials - INFO - Found credentials in environment variables.
+2025-05-20 16:56:27,485 - __main__ - INFO - Starting BLS data sync
+2025-05-20 16:56:29,845 - __main__ - INFO - Successfully connected to AWS S3
+2025-05-20 16:56:29,845 - __main__ - INFO - Available buckets: ['my-rearc-project']
+2025-05-20 16:56:30,962 - __main__ - INFO - Successfully accessed bucket: my-rearc-project
+2025-05-20 16:56:31,456 - __main__ - INFO - Found 2 files in BLS directory
+2025-05-20 16:56:31,459 - __main__ - INFO - BLS data sync completed. Processed 0 files.
+2025-05-20 17:08:07,144 - botocore.credentials - INFO - Found credentials in environment variables.
+2025-05-20 17:08:07,237 - __main__ - INFO - Starting BLS data sync
+2025-05-20 17:08:08,029 - __main__ - INFO - Successfully connected to AWS S3
+2025-05-20 17:08:08,029 - __main__ - INFO - Available buckets: ['my-rearc-project']
+2025-05-20 17:08:09,036 - __main__ - INFO - Successfully accessed bucket: my-rearc-project
+2025-05-20 17:08:11,308 - __main__ - INFO - BLS Directory Content:
+2025-05-20 17:08:11,308 - __main__ - INFO - <html><head><title>download.bls.gov - /pub/time.series/pr/</title></head><body><H1>download.bls.gov - /pub/time.series/pr/</H1><hr>
+
+<pre><A HREF="/pub/time.series/">[To Parent Directory]</A><br><br>  5/8/2025  8:30 AM          102 <A HREF="/pub/time.series/pr/pr.class">pr.class</A><br> 9/13/2022  4:52 PM          562 <A HREF="/pub/time.series/pr/pr.contacts">pr.contacts</A><br>  5/8/2025  8:30 AM      1552889 <A HREF="/pub/time.series/pr/pr.data.0.Current">pr.data.0.Current</A><br>  5/8/2025  8:30 AM      3176483 <A HREF="/pub/time.series/pr/pr.data.1.AllData">pr.data.1.AllData</A><br>  5/8/2025  8:30 AM          176 <A HREF="/pub/time.series/pr/pr.duration">pr.duration</A><br>  5/8/2025  8:30 AM           40 <A HREF="/pub/time.series/pr/pr.footnote">pr.footnote</A><br>  5/8/2025  8:30 AM          745 <A HREF="/pub/time.series/pr/pr.measure">pr.measure</A><br>  1/7/1994  3:53 PM          146 <A HREF="/pub/time.series/pr/pr.period">pr.period</A><br>11/18/2011  4:05 PM           79 <A HREF="/pub/time.series/pr/pr.seasonal">pr.seasonal</A><br>  5/8/2025  8:30 AM          263 <A HREF="/pub/time.series/pr/pr.sector">pr.sector</A><br>  5/8/2025  8:30 AM        15657 <A HREF="/pub/time.series/pr/pr.series">pr.series</A><br>11/17/2011  5:11 PM        18343 <A HREF="/pub/time.series/pr/pr.txt">pr.txt</A><br></pre><hr></body></html>
+2025-05-20 17:08:11,308 - __main__ - INFO - Found 2 files in BLS directory
+2025-05-20 17:08:11,310 - __main__ - INFO - BLS data sync completed. Processed 0 files.
+2025-05-20 17:11:26,950 - botocore.credentials - INFO - Found credentials in environment variables.
+2025-05-20 17:11:27,051 - __main__ - INFO - Starting BLS data sync
+2025-05-20 17:11:27,822 - __main__ - INFO - Successfully connected to AWS S3
+2025-05-20 17:11:27,822 - __main__ - INFO - Available buckets: ['my-rearc-project']
+2025-05-20 17:11:30,754 - __main__ - INFO - Successfully accessed bucket: my-rearc-project
+2025-05-20 17:11:31,211 - __main__ - INFO - Found 7 required files in BLS directory
+2025-05-20 17:11:31,211 - __main__ - INFO - Files to process: ['pr.data.0.Current', 'pr.data.1.AllData', 'pr.footnote', 'pr.measure', 'pr.period', 'pr.sector', 'pr.series']
+2025-05-20 17:11:31,212 - __main__ - INFO - Processing file: pr.data.0.Current
+2025-05-20 17:11:32,224 - __main__ - INFO - Successfully uploaded pr.data.0.Current to S3
+2025-05-20 17:11:32,224 - __main__ - INFO - Processing file: pr.data.1.AllData
+2025-05-20 17:11:33,766 - __main__ - INFO - Successfully uploaded pr.data.1.AllData to S3
+2025-05-20 17:11:33,767 - __main__ - INFO - Processing file: pr.footnote
+2025-05-20 17:11:34,243 - __main__ - INFO - Successfully uploaded pr.footnote to S3
+2025-05-20 17:11:34,243 - __main__ - INFO - Processing file: pr.measure
+2025-05-20 17:11:34,721 - __main__ - INFO - Successfully uploaded pr.measure to S3
+2025-05-20 17:11:34,721 - __main__ - INFO - Processing file: pr.period
+2025-05-20 17:11:35,220 - __main__ - INFO - Successfully uploaded pr.period to S3
+2025-05-20 17:11:35,220 - __main__ - INFO - Processing file: pr.sector
+2025-05-20 17:11:35,679 - __main__ - INFO - Successfully uploaded pr.sector to S3
+2025-05-20 17:11:35,679 - __main__ - INFO - Processing file: pr.series
+2025-05-20 17:11:36,180 - __main__ - INFO - Successfully uploaded pr.series to S3
+2025-05-20 17:11:36,181 - __main__ - INFO - BLS data sync completed. Processed 7 files.
+2025-05-20 17:27:30,274 - botocore.credentials - INFO - Found credentials in environment variables.
+2025-05-20 17:27:31,561 - __main__ - INFO - Starting BLS data sync
+2025-05-20 17:27:32,374 - __main__ - INFO - Successfully connected to AWS S3
+2025-05-20 17:27:32,374 - __main__ - INFO - Available buckets: ['my-rearc-project']
+2025-05-20 17:27:32,426 - __main__ - INFO - Successfully accessed bucket: my-rearc-project
+2025-05-20 17:27:34,364 - __main__ - INFO - Found 3 files in BLS directory
+2025-05-20 17:27:34,367 - __main__ - INFO - Processing file: pr.data.0.Current
+2025-05-20 17:27:35,036 - __main__ - INFO - File pr.data.0.Current is unchanged, skipping upload
+2025-05-20 17:27:35,042 - __main__ - INFO - Processing file: pr.data.1.AllData
+2025-05-20 17:27:35,754 - __main__ - INFO - File pr.data.1.AllData is unchanged, skipping upload
+2025-05-20 17:27:35,766 - __main__ - INFO - Processing file: pr.txt
+2025-05-20 17:27:36,369 - __main__ - INFO - Successfully uploaded pr.txt to S3
+2025-05-20 17:27:36,492 - __main__ - INFO - Sync completed with the following changes:
+2025-05-20 17:27:36,493 - __main__ - INFO - Added files: ['pr.txt']
+2025-05-20 17:27:36,493 - __main__ - INFO - Updated files: []
+2025-05-20 17:27:36,493 - __main__ - INFO - Deleted files: []
+2025-05-20 17:31:03,769 - botocore.credentials - INFO - Found credentials in environment variables.
+2025-05-20 17:31:04,960 - __main__ - INFO - Starting BLS data sync
+2025-05-20 17:31:06,083 - __main__ - INFO - Successfully connected to AWS S3
+2025-05-20 17:31:06,083 - __main__ - INFO - Available buckets: ['my-rearc-project']
+2025-05-20 17:31:06,115 - __main__ - INFO - Successfully accessed bucket: my-rearc-project
+2025-05-20 17:31:06,519 - __main__ - INFO - Found 3 files in BLS directory
+2025-05-20 17:31:06,521 - __main__ - INFO - Processing file: pr.data.0.Current
+2025-05-20 17:31:07,016 - __main__ - INFO - File pr.data.0.Current is unchanged, skipping upload
+2025-05-20 17:31:07,022 - __main__ - INFO - Processing file: pr.data.1.AllData
+2025-05-20 17:31:07,667 - __main__ - INFO - File pr.data.1.AllData is unchanged, skipping upload
+2025-05-20 17:31:07,675 - __main__ - INFO - Processing file: pr.txt
+2025-05-20 17:31:08,109 - __main__ - INFO - File pr.txt is unchanged, skipping upload
+2025-05-20 17:31:08,228 - __main__ - INFO - Sync completed with the following changes:
+2025-05-20 17:31:08,229 - __main__ - INFO - Added files: []
+2025-05-20 17:31:08,229 - __main__ - INFO - Updated files: []
+2025-05-20 17:31:08,229 - __main__ - INFO - Deleted files: []

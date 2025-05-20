@@ -1,0 +1,9 @@
+2025-05-20 17:46:08,884 - botocore.credentials - INFO - Found credentials in environment variables.
+2025-05-20 17:46:08,995 - __main__ - INFO - Starting population data processing
+2025-05-20 17:46:09,991 - __main__ - INFO - Successfully connected to AWS S3
+2025-05-20 17:46:09,992 - __main__ - INFO - Available buckets: ['my-rearc-project']
+2025-05-20 17:46:11,154 - __main__ - INFO - Successfully accessed bucket: my-rearc-project
+2025-05-20 17:46:11,154 - __main__ - INFO - Fetching data from: https://api.worldbank.org/v2/country/USA/indicator/SP.POP.TOTL?format=json&date=2013:2018
+2025-05-20 17:46:11,826 - __main__ - INFO - Successfully fetched 6 years of population data
+2025-05-20 17:46:11,916 - __main__ - INFO - Successfully saved population data to S3: population_data_20250520_174611.json
+2025-05-20 17:46:11,916 - __main__ - INFO - Population data processing completed successfully
